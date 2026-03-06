@@ -1,0 +1,64 @@
+/* ============================================================
+   Tailwind v4 — single import replaces all @tailwind directives
+   DO NOT use @tailwind base/components/utilities (that's v3)
+   ============================================================ */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&family=Syne:wght@700;800&display=swap');
+@import "tailwindcss";
+
+
+/* ── DESIGN TOKENS — edit here to retheme the entire site ── */
+:root {
+  --bg:      #03040a;   /* page background                        */
+  --card:    #0b0c18;   /* card / panel background                */
+  --code-bg: #0d1117;   /* code window background (GitHub dark)   */
+  --border:  #151628;   /* default border color                   */
+  --green:   #39ff8f;   /* PRIMARY accent — cursor, CTAs          */
+  --teal:    #00e5ff;   /* SECONDARY accent — code properties     */
+  --pink:    #ff6eb4;   /* TERTIARY accent — matrix drops         */
+  --text:    #dde0f0;   /* primary text                           */
+  --dim:     #5a5a7a;   /* muted / secondary text                 */
+}
+
+/* ── BASE RESET ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html  { scroll-behavior: smooth; }
+body  {
+  font-family: 'JetBrains Mono', monospace;
+  background: var(--bg);
+  color: var(--text);
+  overflow-x: hidden;
+  cursor: none; /* replaced by custom SVG key cursor in KeyCursor.jsx */
+}
+
+/* ── SYNTAX TOKEN CLASSES ──────────────────────────────────
+   Used in dangerouslySetInnerHTML code blocks across:
+   Preloader.jsx, AboutDecrypt.jsx, ProjectCard.jsx, ContactAccess.jsx
+
+   .ck  = keyword     → pink   (const, return, =>, import)
+   .cv  = variable    → white  (KaniyaKodes, data, url)
+   .cp  = property    → cyan   (role, focus, buildWith)
+   .cs  = string      → green  ("Frontend Developer")
+   .cs2 = string alt  → yellow (secondary return values)
+   .cc  = comment     → gray   (// comments — italic)
+   .cn  = number/bool → purple (true, false, 100)
+   .cpt = punctuation → dim    ({ } [ ] , ; =>)
+   ────────────────────────────────────────────────────────── */
+.ck  { color: #ff79c6; }
+.cv  { color: #f8f8f2; }
+.cp  { color: #8be9fd; }
+.cs  { color: #50fa7b; }
+.cs2 { color: #f1fa8c; }
+.cc  { color: #6272a4; font-style: italic; }
+.cn  { color: #bd93f9; }
+.cpt { color: #6272a4; }
+
+/* ── GLOBAL KEYFRAMES ── */
+@keyframes blink    { 0%,100%{opacity:1;} 50%{opacity:0;} }
+@keyframes lock-bob { 0%,100%{transform:translateY(0);} 50%{transform:translateY(-5px);} }
+@keyframes fadeUp   { from{opacity:0;transform:translateY(16px);} to{opacity:1;transform:translateY(0);} }
+@keyframes glitch   {
+  0%,90%,100% { filter:none; transform:none; }
+  91%          { filter:hue-rotate(60deg);  transform:translateX(-2px); }
+  93%          { filter:hue-rotate(-60deg); transform:translateX(2px);  }
+  95%          { filter:none; }
+}
