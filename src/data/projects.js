@@ -23,7 +23,7 @@ export const projects = [
   {
     id: 2,
     number: '// 02',
-     name: 'GroGlow Recipe',
+    name: 'GroGlow Recipe',
     desc: 'A TypeScript-powered wellness recipe platform with structured interfaces, reusable components, and advanced filtering for ingredient-based discovery.',
     tags: ['React', 'TypeScript', 'Interfaces', 'Filtering Logic'],
     previewGradient: 'linear-gradient(135deg, #065f46 0%, #064e3b 100%)',
@@ -39,8 +39,8 @@ export const projects = [
     liveHref: 'https://groglow.netlify.app/',    // UPDATE
     githubHref: 'https://github.com/Kaniyakm/growglow-recipe',  // UPDATE
   },
-   
-     {
+
+  {
     id: 3,
     number: '// 03',
     name: 'NeoPod-Replay',
@@ -60,7 +60,7 @@ export const projects = [
     githubHref: 'https://github.com/Kaniyakm/neopod-replay',
   },
 
-{
+  {
     id: 4,
     number: '// 04',
     name: 'PacMan-Peach JavaScript',
@@ -83,7 +83,7 @@ export const projects = [
   {
     id: 5,
     number: '// 05',
-     name: 'CineTrackATL',
+    name: 'CineTrackATL',
     desc: 'A full-stack movie tracking platform integrating TMDB API for real-time data, user authentication, watchlists, and personalized dashboards.',
     tags: ['MERN', 'TMDB API', 'JWT', 'MongoDB', 'REST'],
     previewGradient: 'linear-gradient(135deg, #1e293b 0%, #0f172a 100%)',
@@ -96,11 +96,12 @@ export const projects = [
     barWidth: '98%',
     status: 'completed',
     locked: false,
-    liveHref: 'https://cine-trac-atl-git-main-kaniyakms-projects.vercel.app/',    // UPDATE
-    API: 'https://cinetrac-atl.onrender.com',  // UPDATE'
-    githubHref: 'https://github.com/Kaniyakm/CineTrac-ATL',  
+    liveHref: 'https://cine-trac-atl.vercel.app',
+    API: 'https://cinetrac-atl.onrender.com',
+    githubHref: 'https://github.com/Kaniyakm/CineTrac-ATL',
+
   },
-    
+
   {
     id: 6,
     number: '// 06',
@@ -120,7 +121,7 @@ export const projects = [
     liveHref: '#',    // UPDATE
     githubHref: '#',  // UPDATE
 
-    },
+  },
 
   {
     id: 7,
