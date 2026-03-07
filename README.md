@@ -2,9 +2,7 @@ KANIYA KODES — Interactive Portfolio Website
 
 Live Sites
 
-https://kaniya-kodes.vercel.app
-
-https://kaniya-kodes-git-main-kaniyakms-projects.vercel.app
+https://kaniyakodes.com
 
 https://kaniya-kodes-2rgxbxzkv-kaniyakms-projects.vercel.app
 
